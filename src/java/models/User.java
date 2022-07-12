@@ -6,7 +6,7 @@ import java.io.Serializable;
 /**
  * @author Hayley
  */
-public class Model implements Serializable{
+public class User implements Serializable{
     private String email;
     private Boolean active;
     private String first_name;
@@ -14,13 +14,17 @@ public class Model implements Serializable{
     private String password;
     private String role; // Might not need this 
 
-    public Model(String email, Boolean active, String first_name, String last_name, String password, String role) {
+    public User(String email, Boolean active, String first_name, String last_name, String password, String role) {
         this.email = email;
         this.active = active;
         this.first_name = first_name;
         this.last_name = last_name;
         this.password = password;
         this.role = role;
+    }
+
+    public User(String email, boolean active, String firstName, String lastName, String password, Role role) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public String getEmail() {
@@ -64,6 +68,7 @@ public class Model implements Serializable{
     }
 
     public String getRole() {
+        
         return role;
     }
 
